@@ -3,8 +3,8 @@ solution: SampleWebAPI.sln
 
 install:
   - nuget restore SampleWebAPI.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Debug SampleWebAPI.sln
   - msbuild /p:Configuration=Debug ./SampleWebAPITests/SampleWebAPITests.csproj 
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./SampleWebAPITests/bin/Debug/SampleWebAPITests.dll
+  - mono ./testrunner/NUnit.Runners.3.4.1/tools/nunit-console.exe ./SampleWebAPITests/bin/Debug/SampleWebAPITests.dll
