@@ -7,4 +7,4 @@ install:
 script:
   - msbuild /p:Configuration=Debug SampleWebAPI.sln
   - msbuild /p:Configuration=Debug ./SampleWebAPITests/SampleWebAPITests.csproj 
-  - mono ./testrunner/NUnit.Runners.3.4.1/tools/nunit-console.exe ./SampleWebAPITests/bin/Debug/SampleWebAPITests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./SampleWebAPITests/bin/Debug/SampleWebAPITests.dll
