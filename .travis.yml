@@ -1,0 +1,19 @@
+language: csharp
+solution: SampleWebAPI.sln
+
+install:
+  - nuget restore SampleWebAPI.sln
+  - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Debug SampleWebAPI.sln
+  - msbuild /p:Configuration=Debug ./SampleWebAPITests/SampleWebAPITests.csproj 
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./SampleWebAPITests/bin/Debug/SampleWebAPITests.dll
+deploy:
+  skip_cleanup: true
+  provider: azure_web_apps
+  #username: azure_deployment_user       # If AZURE_WA_USERNAME isn't set
+  #password: azure_deployment_password   # If AZURE_WA_PASSWORD isn't set
+  #site: http://jayssamplewebapi.azurewebsites.net       # If AZURE_WA_SITE isn't set
+  slot: dev       # (optional) If AZURE_WA_SLOT isn't set
+  on: thakkarjay-patch-1
+   # all_branches: true
