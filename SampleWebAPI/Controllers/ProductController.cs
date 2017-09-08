@@ -25,8 +25,8 @@ namespace SampleWebAPI.Controllers
                 Id = 2,
                 Name = "Toaster",
                 Description = "It doesn't drive, but it toasts"
-            }
-			new Product
+            },
+	    new Product
             {
                 Id = 3,
                 Name = "Waffle iron",
