@@ -5,5 +5,5 @@ install:
   - nuget restore SampleWebAPI.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release solution-name.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./SampleWebAPI.Tests/bin/Release/SampleWebAPI.Tests.dll
+  - msbuild /p:Configuration=Release SampleWebAPI.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./SampleWebAPITests/bin/Release/SampleWebAPI.Tests.dll
