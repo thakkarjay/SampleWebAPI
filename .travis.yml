@@ -12,5 +12,5 @@ deploy:
   skip_cleanup: true
   provider: azure_web_apps
   verbose: true
-  on: thakkarjay-patch-1
+  # on: thakkarjay-patch-1
    # all_branches: true
