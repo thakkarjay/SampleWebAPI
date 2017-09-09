@@ -13,4 +13,4 @@ deploy:
   provider: azure_web_apps
   verbose: true
   on: master
-   # all_branches: true
+
