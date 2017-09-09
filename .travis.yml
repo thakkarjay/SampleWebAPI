@@ -12,6 +12,5 @@ deploy:
   skip_cleanup: true
   provider: azure_web_apps
   verbose: true
-  site: 'http://jayssamplewebapi.azurewebsites.net/'
   on: thakkarjay-patch-1
    # all_branches: true
